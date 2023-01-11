@@ -1,6 +1,7 @@
 import { Flex, Box, FormControl, FormLabel, Input, Checkbox, Stack, Link, Button, Heading, Text, useColorModeValue, InputGroup, InputRightElement, useBoolean, IconButton } from '@chakra-ui/react';
 import ApplicationLogo from '../Components/ApplicationLogo';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { Link as RouterLink } from 'react-router-dom';
 
 export default function Login() {
   const [showPassword, setShowPassword] = useBoolean();
@@ -35,14 +36,16 @@ export default function Login() {
                 <Checkbox>Remember me</Checkbox>
                 <Link color={'blue.400'}>Forgot password?</Link>
               </Stack>
-              <Button
-                bg={'blue.400'}
-                color={'white'}
-                _hover={{
-                  bg: 'blue.500',
-                }}>
-                Sign in
-              </Button>
+              <RouterLink to={'/home'}>
+                <Button
+                  bg={'blue.400'}
+                  color={'white'}
+                  _hover={{
+                    bg: 'blue.500',
+                  }}>
+                  Sign in
+                </Button>
+              </RouterLink>
             </Stack>
           </Stack>
         </Box>
