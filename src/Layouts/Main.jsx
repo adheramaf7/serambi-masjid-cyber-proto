@@ -80,7 +80,7 @@ export default function Main() {
                         minW={0}>
                         <Stack direction="row" align="center">
                            <Show above="sm">
-                              <Text textColor="gray.300">Mustajib</Text>
+                              <Text textColor="gray.300">Hendra Mahendra</Text>
                            </Show>
                            <Avatar
                               size={'sm'}

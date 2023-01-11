@@ -8,8 +8,11 @@ import {
    StatLabel,
    StatNumber,
    useColorModeValue,
+   Image,
+   VStack,
 } from '@chakra-ui/react';
 import { FiMoon, FiUsers } from 'react-icons/fi';
+import ImageMap from './../assets/map2.jpg';
 
 const kecamatan = [
    {
@@ -33,6 +36,21 @@ const kecamatan = [
       remas: 400,
    },
    {
+      name: 'Kebomas',
+      masjid: 200,
+      remas: 400,
+   },
+   {
+      name: 'Kebomas',
+      masjid: 200,
+      remas: 400,
+   },
+   {
+      name: 'Manyar',
+      masjid: 200,
+      remas: 400,
+   },
+   {
       name: 'Manyar',
       masjid: 200,
       remas: 400,
@@ -48,8 +66,8 @@ const StatsCard = ({ label, number, icon }) => {
          border={'1px solid'}
          borderColor={'gray.200'}
          rounded={'md'}>
-         <Flex justifyContent={'space-between'}>
-            <Box pl={{ base: 2, md: 4 }}>
+         <Flex justifyContent={'space-between'} px="2">
+            <Box>
                <StatLabel fontWeight={'medium'} fontSize={'md'}>
                   {label}
                </StatLabel>
@@ -76,7 +94,7 @@ export default function Dashboard() {
                <Text>Selamat Datang,</Text>
                <Heading fontSize="2xl">Mustajib</Heading>
             </Box>
-            <Stack direction={'row'} spacing={2} justify={'space-between'}>
+            <Stack direction={'row'} spacing={2} justify={'space-between'} mb="4">
                <Box flex={1} bg="white">
                   <StatsCard icon={<FiMoon fontSize={'50'} />} label={'Masjid'} number={200} />
                </Box>
@@ -88,6 +106,14 @@ export default function Dashboard() {
                   />
                </Box>
             </Stack>
+            <Box>
+               <Text fontSize={'xl'} fontWeight={'semibold'} mb="2">
+                  Peta Persebaran Masjid{' '}
+               </Text>
+               <Box overflow={'hidden'} rounded={'md'} shadow={'sm'}>
+                  <Image src={ImageMap} w={'full'} />
+               </Box>
+            </Box>
          </Box>
          <Box flex="2">
             <Stack p="4" boxShadow="md" rounded={'md'} bg="white">
