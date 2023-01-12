@@ -3,6 +3,7 @@ import Login from './Pages/Login';
 import MainLayout from './Layouts/Main';
 import Dashboard from './Pages/Dashboard';
 import KecamatanDetail from './Pages/KecamatanDetail';
+import MasjidDetail from './Pages/MasjidDetail';
 
 const router = createBrowserRouter([
    {
@@ -17,8 +18,12 @@ const router = createBrowserRouter([
             element: <Dashboard />,
          },
          {
-            path: '/kecamatan/detail',
+            path: '/kecamatan-detail',
             element: <KecamatanDetail />,
+         },
+         {
+            path: '/masjid-detail',
+            element: <MasjidDetail />,
          },
       ],
    },

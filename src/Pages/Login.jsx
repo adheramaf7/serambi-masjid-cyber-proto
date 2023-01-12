@@ -30,11 +30,11 @@ export default function Login() {
          justify={'center'}
          bg={useColorModeValue('gray.50', 'gray.800')}>
          <Stack spacing={6} mx={'auto'} maxW="lg" w="full" py={12} px={6}>
-            <Stack align={'center'}>
+            <Stack align={'center'} textAlign={'center'}>
                <ApplicationLogo maxW="20" mb="3" />
-               <Heading fontSize={'4xl'}>Serambi Masjid Cyber</Heading>
-               <Text fontSize={'lg'} color={'gray.600'}>
-                  Login untuk Melihat Fitur Lebih Lanjut 😇
+               <Heading fontSize={{ base: '2xl', md: '4xl' }}>Serambi Masjid Cyber</Heading>
+               <Text fontSize={{ base: 'lg', md: 'xl' }} color={'gray.600'}>
+                  Masuk dengan Akun Anda
                </Text>
             </Stack>
             <Box rounded={'lg'} bg={useColorModeValue('white', 'gray.700')} boxShadow={'lg'} p={8}>
